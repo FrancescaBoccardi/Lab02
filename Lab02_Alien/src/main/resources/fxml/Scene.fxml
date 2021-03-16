@@ -5,8 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -36,24 +34,16 @@
                         <Insets left="10.0" right="20.0" top="15.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="txtParole" prefHeight="26.0" prefWidth="151.0">
+                  <TextField fx:id="txtParole" prefHeight="26.0" prefWidth="203.0">
                      <HBox.margin>
                         <Insets left="30.0" top="10.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button fx:id="btnTranslate" mnemonicParsing="false" onAction="#doTranslate" prefHeight="26.0" prefWidth="89.0" text="Translate">
+                  <Button fx:id="btnTranslate" mnemonicParsing="false" onAction="#doTranslate" prefHeight="26.0" prefWidth="78.0" text="Translate">
                      <HBox.margin>
                         <Insets left="10.0" top="10.0" />
                      </HBox.margin>
                   </Button>
-                  <ImageView fitHeight="57.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../kisspng-extraterrestrial-life-alien-symbol-extraterrestre-5b36c049b9c8c6.085499311530314825761.jpg" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="20.0" right="10.0" />
-                     </HBox.margin>
-                  </ImageView>
                </children>
                <VBox.margin>
                   <Insets left="10.0" top="10.0" />

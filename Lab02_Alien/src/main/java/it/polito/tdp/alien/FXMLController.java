@@ -39,7 +39,7 @@ public class FXMLController {
     @FXML
     void doTranslate(ActionEvent event) {
     	
-    	if(!txtParole.getText().matches("[a-zA-Z\s]*")) {
+    	if(!txtParole.getText().matches("[a-zA-Z\s\\?]*")) {
     		txtResult.setText("ERRORE: le parole non possono contenere numeri e/o caratteri speciali");
     		return;
     	}
@@ -52,6 +52,19 @@ public class FXMLController {
     	String parole[] = txtParole.getText().toLowerCase().split(" ");
     	
     	if(parole.length==1) {
+    		
+			int num = 0;
+			for(int i=0;i<parole[0].length();i++) {
+				if(parole[0].charAt(i)=='?') {
+					num++;
+				}
+			}
+			
+			if(num==1) {
+				parole[0] = parole[0].replace("?", "[a-z]");
+			}
+    		
+			
     		if(words.translateWord(parole[0])!=null) {
     			txtResult.setText(words.translateWord(parole[0]));
     		}

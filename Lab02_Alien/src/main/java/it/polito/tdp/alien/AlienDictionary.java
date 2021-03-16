@@ -46,13 +46,21 @@ public class AlienDictionary {
 	}
 	
 	public String translateWord(String alienWord) {
+		String risultato = "Traduzione/i:";
+		boolean esiste = false;
 		for(WordEnhanced w : words) {
-			if(w.equals(alienWord)) {
-				return "Traduzione di "+alienWord+": "+w.getTranslations();
+			if(w.equals(alienWord) || w.getAlienWord().matches(alienWord)) {
+				risultato += " "+w.getTranslations()+",";
+				esiste = true;
 			}
 		}
 		
-		return null;
+		if(esiste) {
+			return risultato.substring(0,risultato.length()-1);
+		}else {
+			return null;
+		}
+		
 	}
 
 }
